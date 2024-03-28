@@ -1,0 +1,20 @@
+.about{
+    background-image: url('../assets/images/Sobgola.jpg');
+    height: 600px;
+    padding-inline: 200px;
+    text-align: center;
+    width: 70%;
+    margin: auto; 
+    border-radius: 25px;
+    padding-top: 120px;
+}
+.pp{
+    margin-top: 50px;
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+    padding-bottom: 20px;
+}
+.catagory{
+    padding-inline: 200px;
+}
