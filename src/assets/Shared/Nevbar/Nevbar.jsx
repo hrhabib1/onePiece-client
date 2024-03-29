@@ -1,4 +1,17 @@
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProviders";
+
 const Nevbar = () => {
+    const { user,logOut } = useContext(AuthContext);
+    console.log(user)
+    const handleSignOut = () => {
+        logOut()
+        .then(result => {
+            console.log('Sign-out successful....', result)
+           
+        })
+        .catch(e => console.error(e))
+    }
     return (
         <div>
             <div className="h-24 w-full bg-violet-400 p-10 flex justify-between items-center fixed bg-opacity-30 z-10">
@@ -9,7 +22,12 @@ const Nevbar = () => {
                 <a className="text-white font-bold" href="/vegetable">Vegetables</a>
                 <a className="text-white font-bold" href="/rice">Rice</a>
                 <a className="text-white font-bold" href="/addPost">AddPost</a>
-                <a className="btn bg-purple-200 text-black" href="/signUp">SignIn/SignUp</a>
+                
+              { 
+              user?.email ?
+              <button onClick={handleSignOut} className="btn btn-active btn-ghost">Sign out</button>
+                :
+                <a className="btn bg-purple-200 text-black" href="/signUp">SignIn/SignUp</a>}
             </div>
         </div>
     );
