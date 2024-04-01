@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
+
 const ServiceCart = ({item}) => {
-    const {title, image, details, priceKilo, price, mobile,  date} = item;
+    const {title, image, details, priceKilo, price, mobile,  date, _id} = item;
     return (
         <div className="card card-compact mx-24 bg-base-500 shadow-xl">
                     <figure><img className='h-96 w-06' src={image} alt="broilar" /></figure>
@@ -11,7 +13,10 @@ const ServiceCart = ({item}) => {
                         <p>{details}</p>
                         <p>যোগাযোগঃ {mobile}।</p>
                         <div className="card-actions justify-end">
+                            <Link to={`/order/${_id}`}>
                             <button className="btn btn-primary">Order Now</button>
+                            </Link>
+                            
                         </div>
                     </div>
                 </div>

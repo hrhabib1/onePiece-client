@@ -11,6 +11,7 @@ import Meet from "../../assets/Pages/Services/Meet";
 import Fishes from "../../assets/Pages/Services/Fishes";
 import Vegetable from "../../assets/Pages/Services/Vegetable";
 import Rice from "../../assets/Pages/Services/Rice";
+import Order from "../../assets/Pages/Order/Order";
   export const router = createBrowserRouter([
     {
         path: "/",
@@ -51,6 +52,11 @@ import Rice from "../../assets/Pages/Services/Rice";
       {
         path: '/rice',
         element: <Rice></Rice>
+    },
+      {
+        path: '/order/:id',
+        element: <Order></Order>,
+        loader: ({params}) => fetch(`http://localhost:5000/addSellPost/${params.id}`)
     },
       
         
