@@ -19,7 +19,7 @@ const Nevbar = () => {
                 <a className="text-white font-bold ml-56" href="/home">Home</a>
                 <a className="text-white font-bold" href="/meat">Meats</a>
                 <a className="text-white font-bold" href="/fishes">Fishes</a>
-                <a className="text-white font-bold" href="/vegetable">Vegetables</a>
+                <a className="text-white font-bold" href="/vegetables">Vegetables</a>
                 <a className="text-white font-bold" href="/rice">Rice</a>
                 <a className="text-white font-bold" href="/addPost">AddPost</a>
                 

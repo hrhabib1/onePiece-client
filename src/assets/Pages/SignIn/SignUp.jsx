@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProviders";
+
 const SignUp = () => {
     const {createUser} = useContext(AuthContext)
     const [error, setError] = useState('')

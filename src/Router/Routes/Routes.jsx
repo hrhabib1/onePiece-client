@@ -6,8 +6,11 @@ import Front from "../../assets/Pages/Home/Front";
 import Home from "../../assets/Pages/Home/Home";
 import SignIn from "../../assets/Pages/SignIn/SignIn";
 import SignUp from "../../assets/Pages/SignIn/SignUp";
-import Meet from "../../assets/Pages/Services/Meet/Meet";
-import Fishes from "../../assets/Pages/Services/Fishes/Fishes";
+import AddPost from "../../assets/Pages/AddPost/AddPost";
+import Meet from "../../assets/Pages/Services/Meet";
+import Fishes from "../../assets/Pages/Services/Fishes";
+import Vegetable from "../../assets/Pages/Services/Vegetable";
+import Rice from "../../assets/Pages/Services/Rice";
   export const router = createBrowserRouter([
     {
         path: "/",
@@ -37,6 +40,18 @@ import Fishes from "../../assets/Pages/Services/Fishes/Fishes";
             path: '/fishes',
             element: <Fishes></Fishes>
         },
+          {
+            path: '/addPost',
+            element: <AddPost></AddPost>
+        },
+        {
+          path: '/vegetables',
+          element: <Vegetable></Vegetable>
+      },
+      {
+        path: '/rice',
+        element: <Rice></Rice>
+    },
       
         
         ]
