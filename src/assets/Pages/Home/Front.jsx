@@ -23,34 +23,28 @@ const Front = () => {
             <div className="p-10 text-black">
             <h1 className=" text-3xl font-bold  mb-10">Category :</h1>
             <div className="flex flex-row gap-8 mx-auto catagory">
-                <div className="card w-96 bg-base-500 shadow-xl image-full">
+                <div className="card w-96 h-56 bg-base-500 shadow-xl image-full">
                     <figure><img src={img1} alt="meets" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title font-extrabold mt-16 mx-auto text-white">Meats</h2>
+                        <a className="card-title font-extrabold mt-16 mx-auto text-white" href="/meat">Meats</a>
                     </div>
                 </div>
-                <div className="card w-96 bg-base-100 shadow-xl image-full">
+                <div className="card w-96 h-56 bg-base-100 shadow-xl image-full">
                     <figure><img src={img2} alt="fishes" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title font-extrabold mt-16 mx-auto text-white">Fishes</h2>
+                        <a className="card-title font-extrabold mt-16 mx-auto text-white" href="/fishes">Fishes</a>
                     </div>
                 </div>
-                <div className="card w-96 bg-base-100 shadow-xl image-full">
+                <div className="card w-96 h-56 bg-base-100 shadow-xl image-full">
                     <figure><img src={img3} alt="vegetable" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title font-extrabold mt-16 mx-auto text-white">Vegetables</h2>
+                        <a className="card-title font-extrabold mt-16 mx-auto text-white" href="/vegetables">Vegetables</a>
                     </div>
                 </div>
-                <div className="card w-96 bg-base-100 shadow-xl image-full">
-                    <figure><img src={img4} alt="spice" /></figure>
-                    <div className="card-body">
-                        <h2 className="card-title font-extrabold mt-16 mx-auto text-white">Spices</h2>
-                    </div>
-                </div>
-                <div className="card w-96 bg-base-100 shadow-xl image-full">
+                <div className="card w-96 h-56 bg-base-100 shadow-xl image-full">
                     <figure><img src={img5} alt="rice" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title font-extrabold mt-16 mx-auto text-white">Rice</h2>
+                        <a className="card-title font-extrabold mt-16 mx-auto text-white" href='/rice'>Rice</a>
                     </div>
                 </div>
             </div>

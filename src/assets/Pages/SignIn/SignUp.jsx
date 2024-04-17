@@ -62,7 +62,6 @@ const SignUp = () => {
            <h1>Or,</h1>
            <p> Already have an account? </p>
            <a className="text-red-600" href="/signIn">Sign in here </a>
-           <a className="text-red-900 btn" href="/home">Go Back</a>
         </form>
     </div>
     );

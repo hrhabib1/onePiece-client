@@ -14,6 +14,7 @@ import Rice from "../../assets/Pages/Services/Rice";
 import Order from "../../assets/Pages/Order/Order";
 import MyOrder from "../../assets/Pages/Order/MyOrder";
 import PrivateRoute from "../PrivateRoutes/PrivateRoute";
+import AllOrders from "../../assets/Pages/Order/AllOrders";
   export const router = createBrowserRouter([
     {
         path: "/",
@@ -37,11 +38,11 @@ import PrivateRoute from "../PrivateRoutes/PrivateRoute";
           },
           {
               path: '/meat',
-              element: <Meet></Meet>
+              element: <PrivateRoute><Meet></Meet></PrivateRoute> 
           },
           {
             path: '/fishes',
-            element: <Fishes></Fishes>
+            element: <PrivateRoute><Fishes></Fishes></PrivateRoute> 
         },
           {
             path: '/addPost',
@@ -49,15 +50,19 @@ import PrivateRoute from "../PrivateRoutes/PrivateRoute";
         },
         {
           path: '/vegetables',
-          element: <Vegetable></Vegetable>
+          element: <PrivateRoute><Vegetable></Vegetable></PrivateRoute> 
       },
       {
         path: '/rice',
-        element: <Rice></Rice>
+        element: <PrivateRoute><Rice></Rice></PrivateRoute> 
     },
       {
         path: '/myOrder',
         element: <PrivateRoute><MyOrder></MyOrder></PrivateRoute>
+    },
+      {
+        path: '/allOrders',
+        element: <PrivateRoute><AllOrders></AllOrders></PrivateRoute>
     },
       {
         path: '/order/:id',

@@ -3,28 +3,33 @@ import Nevbar from "../../Shared/Nevbar/Nevbar";
 import { AuthContext } from "../../../providers/AuthProviders";
 import MyOrderRow from "./MyOrderRow";
 
-const MyOrder = () => {
+const AllOrders = () => {
     const { user } = useContext(AuthContext);
     const [orders, setOrders] = useState([]);
-    const url = `http://localhost:5000/orders?email=${user.email}`;
     useEffect(() => {
-        fetch(url)
+        fetch('http://localhost:5000/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
-    }, [url]);
-    const handleDelete= id =>{
-        const proceed = confirm('Are you sure you want to delete it?');
+    }, []);
+    const handleOrderConfirm = id =>{
+        const proceed = confirm('Are you sure you want to confirm it?');
         if(proceed){
           fetch(`http://localhost:5000/orders/${id}`, {
-              method: 'DELETE'
+              method: 'PATCH',
+              headers:{
+                'content-type': 'application/json'
+              },
+              body: JSON.stringify({status: 'confirmed'})
           })
           .then(res => res.json())
           .then(data => {
               console.log(data);
-              if(data.deleteCount > 0){
+              if(data.modifiedCount > 0){
                   const remaining = orders.filter(order=> order._id !== id);
-                  setOrders(remaining);
-                  alert('deleted successful');
+                  const update = orders.find(order=> order._id === id);
+                  update.status = 'confirmed'
+                  const newOrders = [update, ...remaining]
+                  setOrders(newOrders);
               }
           })
         }
@@ -56,7 +61,7 @@ const MyOrder = () => {
                             orders.map(order => <MyOrderRow
                               key={order._id}
                               order={order}
-                              handleDelete={handleDelete}
+                              handleOrderConfirm={handleOrderConfirm}
                             ></MyOrderRow>)
                           }
                            
@@ -69,4 +74,4 @@ const MyOrder = () => {
     );
 };
 
-export default MyOrder;
+export default AllOrders;
