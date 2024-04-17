@@ -12,6 +12,7 @@ import Fishes from "../../assets/Pages/Services/Fishes";
 import Vegetable from "../../assets/Pages/Services/Vegetable";
 import Rice from "../../assets/Pages/Services/Rice";
 import Order from "../../assets/Pages/Order/Order";
+import MyOrder from "../../assets/Pages/Order/MyOrder";
   export const router = createBrowserRouter([
     {
         path: "/",
@@ -52,6 +53,10 @@ import Order from "../../assets/Pages/Order/Order";
       {
         path: '/rice',
         element: <Rice></Rice>
+    },
+      {
+        path: '/myOrder',
+        element: <MyOrder></MyOrder>
     },
       {
         path: '/order/:id',
