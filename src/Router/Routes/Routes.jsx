@@ -13,6 +13,7 @@ import Vegetable from "../../assets/Pages/Services/Vegetable";
 import Rice from "../../assets/Pages/Services/Rice";
 import Order from "../../assets/Pages/Order/Order";
 import MyOrder from "../../assets/Pages/Order/MyOrder";
+import PrivateRoute from "../PrivateRoutes/PrivateRoute";
   export const router = createBrowserRouter([
     {
         path: "/",
@@ -56,7 +57,7 @@ import MyOrder from "../../assets/Pages/Order/MyOrder";
     },
       {
         path: '/myOrder',
-        element: <MyOrder></MyOrder>
+        element: <PrivateRoute><MyOrder></MyOrder></PrivateRoute>
     },
       {
         path: '/order/:id',
