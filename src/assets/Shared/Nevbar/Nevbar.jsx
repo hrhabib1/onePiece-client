@@ -28,11 +28,17 @@ const Nevbar = () => {
                 <a className="text-white font-bold" href="/allOrders">All Orders</a>
                 </>
                 :
-                <a className="text-white font-bold" href="/myOrder">My Order</a>
+                <></>
                 }
               { 
               user?.email ?
               <> 
+               {
+                user?.email !== 'shakilahmed7924@gmail.com' ?
+                <a className="text-white font-bold" href="/myOrder">My Order</a>
+                  :
+                  <></>
+            }
                <button onClick={handleSignOut} className="btn btn-active btn-ghost">Sign out</button>
               </>
              
