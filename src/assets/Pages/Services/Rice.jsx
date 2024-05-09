@@ -7,7 +7,7 @@ const Rice = () => {
     const [riceServices, setRiceServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/addSellPost')
+        fetch('https://onepiece-server.up.railway.app/addSellPost')
             .then(res => res.json())
             .then(data =>{
                 const riceServise = data.filter(item => item.

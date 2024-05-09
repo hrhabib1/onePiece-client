@@ -7,7 +7,7 @@ const Meet = () => {
     const [meetServices, setMeetServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/addSellPost')
+        fetch('https://onepiece-server.up.railway.app/addSellPost')
             .then(res => res.json())
             .then(data =>{
                 const meetServise = data.filter(item => item.

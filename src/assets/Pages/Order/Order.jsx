@@ -34,7 +34,7 @@ const Order = () => {
 
         }
         console.log(addOrderPost);
-        fetch('http://localhost:5000/orders', {
+        fetch('https://onepiece-server.up.railway.app/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

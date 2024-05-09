@@ -67,7 +67,7 @@ import AllOrders from "../../assets/Pages/Order/AllOrders";
       {
         path: '/order/:id',
         element: <PrivateRoute><Order></Order></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/addSellPost/${params.id}`)
+        loader: ({params}) => fetch(`https://onepiece-server.up.railway.app/addSellPost/${params.id}`)
     },
       
         

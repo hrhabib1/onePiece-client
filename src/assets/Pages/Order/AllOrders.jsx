@@ -7,14 +7,14 @@ const AllOrders = () => {
     const { user } = useContext(AuthContext);
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://onepiece-server.up.railway.app/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, []);
     const handleOrderConfirm = id =>{
         const proceed = confirm('Are you sure you want to confirm it?');
         if(proceed){
-          fetch(`http://localhost:5000/orders/${id}`, {
+          fetch(`https://onepiece-server.up.railway.app/orders/${id}`, {
               method: 'PATCH',
               headers:{
                 'content-type': 'application/json'

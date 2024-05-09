@@ -6,7 +6,7 @@ const TopSell = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/addSellPost')
+        fetch('https://onepiece-server.up.railway.app/addSellPost')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])

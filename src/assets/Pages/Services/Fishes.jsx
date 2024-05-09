@@ -7,7 +7,7 @@ const Fishes = () => {
     const [fishServices, setFishServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/addSellPost')
+        fetch('https://onepiece-server.up.railway.app/addSellPost')
             .then(res => res.json())
             .then(data =>{
                 const fishServise = data.filter(item => item.

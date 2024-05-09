@@ -25,7 +25,7 @@ const AddPost = () => {
 
         }
         console.log(addSellPost);
-        fetch('http://localhost:5000/addSellPost', {
+        fetch('https://onepiece-server.up.railway.app/addSellPost', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
