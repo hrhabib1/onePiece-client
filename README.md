@@ -7,5 +7,10 @@ Tools : React.JS, Node.js, MongoDB, Firebase, Express.js, JavaScript, React Tail
 
 
 Live site:  https://onepiece-a520d.web.app
+
 Client Repo: https://github.com/hrhabib1/onePiece-client
+
 Server Repo: https://github.com/hrhabib1/onePiece-server
+
+Admin Email: shakilahmed7924@gmail.com
+Pass: 123456
